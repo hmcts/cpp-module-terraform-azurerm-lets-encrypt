@@ -1,7 +1,8 @@
-output "resource_group_name" {
-  value = "resource_group_name"
+output "certificate_fqdn" {
+  value = acme_certificate.cert.common_name
 }
 
-output "resource_group_location" {
-  value = "resource_group_location"
+output "certificate_password" {
+  value     = acme_certificate.cert.certificate_p12_password
+  sensitive = true
 }
