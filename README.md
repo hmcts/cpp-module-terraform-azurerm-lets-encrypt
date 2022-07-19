@@ -9,14 +9,10 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_acme"></a> [acme](#provider\_acme) | 2.10.0 |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.14.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.3.2 |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | 3.4.0 |
-
-## Modules
-
-No modules.
+| <a name="provider_acme"></a> [acme](#provider\_acme) | ~> 2.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+| <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
 
 ## Resources
 
