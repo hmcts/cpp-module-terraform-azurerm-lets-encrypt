@@ -11,10 +11,11 @@ import (
 func TestTerraformAzureKeyVaultExample(t *testing.T) {
 	t.Parallel()
 
-
 	terraformOptions := &terraform.Options{
 		// The path to where our Terraform code is located
 		TerraformDir: "../../examples/test-domain",
+		// Variables to pass to our Terraform code using -var options
+		VarFiles: []string{"for_terratest.tfvars"},
 	}
 
 	defer terraform.Destroy(t, terraformOptions)
