@@ -33,3 +33,8 @@ variable "cert_name" {
   type        = string
   description = "Name of cert stored in the key vault"
 }
+
+variable "letsencrypt_hostname" {
+  type        = string
+  description = "Lets Encrypt api either production=acme-v02 or staging=acme-staging-v02"
+}

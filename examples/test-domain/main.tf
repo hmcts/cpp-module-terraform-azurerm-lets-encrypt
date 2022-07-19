@@ -6,8 +6,7 @@ module "lets_encrypt" {
   email       = "contact@${var.dns_zone_name}"
 
   dns = {
-    //zone_name    = var.dns_zone_name
-    zone_name    = "lab-hmcts.net"
+    zone_name    = var.dns_zone_name
     zone_rg_name = var.dns_zone_rg_name
   }
 
@@ -15,5 +14,6 @@ module "lets_encrypt" {
     name                = var.key_vault_name
     resource_group_name = var.key_vault_resource_group
   }
-  cert_name = var.cert_name
+  cert_name            = var.cert_name
+  letsencrypt_hostname = var.letsencrypt_hostname
 }
