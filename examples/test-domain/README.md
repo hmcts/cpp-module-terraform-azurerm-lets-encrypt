@@ -1,8 +1,3 @@
-## About
-This directory is being used a temporary while the lab-hmcts.net domain is
-registered by the HMCTS central team. @RichDakin can provide more information.
-
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -35,6 +30,7 @@ No resources.
 | <a name="input_dns_zone_rg_name"></a> [dns\_zone\_rg\_name](#input\_dns\_zone\_rg\_name) | The name of the resource group containing the DNS Zone | `string` | n/a | yes |
 | <a name="input_key_vault_name"></a> [key\_vault\_name](#input\_key\_vault\_name) | The name of the key vault to hold certificates | `string` | n/a | yes |
 | <a name="input_key_vault_resource_group"></a> [key\_vault\_resource\_group](#input\_key\_vault\_resource\_group) | The name of the key vault to resource group | `string` | n/a | yes |
+| <a name="input_letsencrypt_hostname"></a> [letsencrypt\_hostname](#input\_letsencrypt\_hostname) | Lets Encrypt api either production=acme-v02 or staging=acme-staging-v02 | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | The location to create the resources in | `string` | n/a | yes |
 
 ## Outputs
@@ -42,5 +38,8 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_certificate_fqdn"></a> [certificate\_fqdn](#output\_certificate\_fqdn) | n/a |
+| <a name="output_certificate_name"></a> [certificate\_name](#output\_certificate\_name) | Certificate name |
 | <a name="output_certificate_password"></a> [certificate\_password](#output\_certificate\_password) | n/a |
-<!-- END_TF_DOCS -->
+| <a name="output_key_vault_name"></a> [key\_vault\_name](#output\_key\_vault\_name) | Key vault name |
+| <a name="output_letsencrypt_api"></a> [letsencrypt\_api](#output\_letsencrypt\_api) | Lets Encrypt API staging or prod |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Key vault resource group name |

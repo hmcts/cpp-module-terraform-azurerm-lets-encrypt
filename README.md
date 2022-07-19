@@ -34,14 +34,19 @@
 | <a name="input_dns"></a> [dns](#input\_dns) | The name and resource group of DNS zone | <pre>object({<br>    zone_name    = string<br>    zone_rg_name = string<br>  })</pre> | n/a | yes |
 | <a name="input_email"></a> [email](#input\_email) | The email used for the registration of the certificate | `string` | n/a | yes |
 | <a name="input_key_vault"></a> [key\_vault](#input\_key\_vault) | n/a | <pre>object({<br>    name                = string<br>    resource_group_name = string<br>  })</pre> | n/a | yes |
+| <a name="input_letsencrypt_hostname"></a> [letsencrypt\_hostname](#input\_letsencrypt\_hostname) | Lets Encrypt api either production=acme-v02 or staging=acme-staging-v02 | `string` | `"acme-v02"` | no |
 | <a name="input_location"></a> [location](#input\_location) | The location to create the resources in | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_certificate_fqdn"></a> [certificate\_fqdn](#output\_certificate\_fqdn) | n/a |
-| <a name="output_certificate_password"></a> [certificate\_password](#output\_certificate\_password) | n/a |
+| <a name="output_certificate_fqdn"></a> [certificate\_fqdn](#output\_certificate\_fqdn) | The common name for the lets encrypt cert(FQDN) |
+| <a name="output_certificate_name"></a> [certificate\_name](#output\_certificate\_name) | Certificate name |
+| <a name="output_certificate_password"></a> [certificate\_password](#output\_certificate\_password) | Password required to use the certificate |
+| <a name="output_key_vault_name"></a> [key\_vault\_name](#output\_key\_vault\_name) | Key vault name |
+| <a name="output_letsencrypt_api"></a> [letsencrypt\_api](#output\_letsencrypt\_api) | Lets Encrypt API staging or prod |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Key vault resource group name |
 <!-- END_TF_DOCS -->
 
 ## Contributing
