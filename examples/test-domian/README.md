@@ -1,3 +1,8 @@
+## About
+This directory is being used a temporary while the lab-hmcts.net domain is
+registered by the HMCTS central team. @RichDakin can provide more information.
+
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -38,3 +43,4 @@ No resources.
 |------|-------------|
 | <a name="output_certificate_fqdn"></a> [certificate\_fqdn](#output\_certificate\_fqdn) | n/a |
 | <a name="output_certificate_password"></a> [certificate\_password](#output\_certificate\_password) | n/a |
+<!-- END_TF_DOCS -->
