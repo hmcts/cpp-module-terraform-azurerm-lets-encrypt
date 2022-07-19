@@ -109,6 +109,7 @@ stages:
           inputs:
             targetType: 'inline'
             script: |
+              az login --service-principal --username $(ARM_CLIENT_ID) --password $(ARM_CLIENT_SECRET) --tenant $(ARM_TENANT_ID)
               go mod init github.com/hmcts/cpp-module-terraform-lets-encrypt
               go mod tidy
               cd tests/terratest
