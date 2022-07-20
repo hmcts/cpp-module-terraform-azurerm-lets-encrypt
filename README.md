@@ -63,3 +63,4 @@ If you add a new hook make sure to run it against all files:
 ```shell
 $ pre-commit run --all-files
 ```
+We use Terratest as the test framework for this repository.
