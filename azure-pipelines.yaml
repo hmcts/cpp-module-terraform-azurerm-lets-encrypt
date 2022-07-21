@@ -1,4 +1,4 @@
-name: CPP Azure Application Gateway
+name: CPP Azure Lets Encrypt Terraform Module
 trigger:
   batch: true
   branches:
