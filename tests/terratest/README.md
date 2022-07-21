@@ -4,7 +4,12 @@ The integration tests use the [examples-test-domain](../../examples/test-domain)
 certificate using Lets Encrypt and Azure DNS.
 ### Note
 We are waiting on the domain validation from HMCTS for lab-hmcts.net but for now
-we are using a temporary domain of megaloop.world.
+we are using a temporary domain of megaloop.world. Once the lab-hmcts.net is
+validated. The tests vars  should be changed to the below in cert_test.go.
+```bash
+TerraformDir: "../../examples/complete",
+
+```
 
 ## Usage
 
