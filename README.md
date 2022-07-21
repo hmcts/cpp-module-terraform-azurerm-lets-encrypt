@@ -1,3 +1,32 @@
+# lets encrypt certs
+A Terraform module which creates a lets encrypt certificate using DNS validation
+and writes the certificate out to a pre-existing Azure key vault.
+
+## Usage
+An example showing the typical usage of this module is shown below:
+
+```hcl
+module "lets_encrypt" {
+  source = "../../"
+
+  location    = var.location
+  common_name = var.common_name
+  email       = "contact@${var.dns_zone_name}"
+
+  dns = {
+    //zone_name    = var.dns_zone_name
+    zone_name    = "lab-hmcts.net"
+    zone_rg_name = var.dns_zone_rg_name
+  }
+
+  key_vault = {
+    name                = var.key_vault_name
+    resource_group_name = var.key_vault_resource_group
+  }
+  cert_name = var.cert_name
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
