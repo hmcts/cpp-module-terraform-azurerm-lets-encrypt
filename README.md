@@ -32,13 +32,13 @@ module "lets_encrypt" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_acme"></a> [acme](#requirement\_acme) | ~> 2.0 |
+| <a name="requirement_acme"></a> [acme](#requirement\_acme) | ~> 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_acme"></a> [acme](#provider\_acme) | ~> 2.0 |
+| <a name="provider_acme"></a> [acme](#provider\_acme) | ~> 3.0 |
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
@@ -60,9 +60,9 @@ module "lets_encrypt" {
 |------|-------------|------|---------|:--------:|
 | <a name="input_cert_name"></a> [cert\_name](#input\_cert\_name) | Name of cert stored in the key vault | `string` | n/a | yes |
 | <a name="input_common_name"></a> [common\_name](#input\_common\_name) | The value of the CN field of the certificate | `string` | n/a | yes |
-| <a name="input_dns"></a> [dns](#input\_dns) | The name and resource group of DNS zone | <pre>object({<br>    zone_name    = string<br>    zone_rg_name = string<br>  })</pre> | n/a | yes |
+| <a name="input_dns"></a> [dns](#input\_dns) | The name and resource group of DNS zone | <pre>object({<br/>    zone_name    = string<br/>    zone_rg_name = string<br/>  })</pre> | n/a | yes |
 | <a name="input_email"></a> [email](#input\_email) | The email used for the registration of the certificate | `string` | n/a | yes |
-| <a name="input_key_vault"></a> [key\_vault](#input\_key\_vault) | n/a | <pre>object({<br>    name                = string<br>    resource_group_name = string<br>  })</pre> | n/a | yes |
+| <a name="input_key_vault"></a> [key\_vault](#input\_key\_vault) | n/a | <pre>object({<br/>    name                = string<br/>    resource_group_name = string<br/>  })</pre> | n/a | yes |
 | <a name="input_letsencrypt_hostname"></a> [letsencrypt\_hostname](#input\_letsencrypt\_hostname) | Lets Encrypt api either production=acme-v02 or staging=acme-staging-v02 | `string` | `"acme-v02"` | no |
 | <a name="input_location"></a> [location](#input\_location) | The location to create the resources in | `string` | n/a | yes |
 
